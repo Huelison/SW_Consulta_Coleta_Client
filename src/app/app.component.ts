@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ComunicacaoProvider } from '../providers/comunicacao/comunicacao';
 import { Observable } from 'rxjs/Observable';
+
 interface Response extends Object, Body {
   readonly body: ReadableStream | null;
   readonly _body: string | null;
@@ -17,6 +18,7 @@ interface Response extends Object, Body {
   readonly redirected: boolean;
   clone(): Response;
 }
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -42,10 +44,10 @@ export class MyApp {
       var valor = res._body;
       var body = JSON.parse(valor);
       console.log(body);
-      this.zone = new NgZone({ enableLongStackTrace: false });
+      //this.zone = new NgZone({ enableLongStackTrace: false });
       this.zone.run(() => {
         if (body.user != undefined)
-          this.username = " - " + body.user;
+          this.username = "Usuário: " + body.user;
         else
           this.username = "";
       });

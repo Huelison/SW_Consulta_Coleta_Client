@@ -22,7 +22,7 @@ export class ComunicacaoProvider {
         let _headers = new Headers({ 'Content-Type': 'application/json' });
         _headers.append('Authorization', "Bearer " + result);
         let _options = new RequestOptions({ headers: _headers });
-        this.http.get('/clientes', _options).toPromise().then((resp) => {
+        this.http.get('http://127.0.0.1:8050/clientes', _options).toPromise().then((resp) => {
           console.log('API Response : ', resp.text());
           resolve(resp);
         }).catch((error) => {
@@ -41,7 +41,7 @@ export class ComunicacaoProvider {
         let _headers = new Headers({ 'Content-Type': 'application/json' });
         _headers.append('Authorization', "Bearer " + result);
         let _options = new RequestOptions({ headers: _headers });
-        this.http.get('/clientes/' + key, _options).toPromise().then((resp) => {
+        this.http.get('http://127.0.0.1:8050/clientes/' + key, _options).toPromise().then((resp) => {
           console.log('API Response : ', resp.text());
           resolve(resp);
         }).catch((error) => {
@@ -63,7 +63,7 @@ export class ComunicacaoProvider {
       "password": password
     }
     return new Promise((resolve, reject) => {
-      this.http.post('/login', JSON.stringify(body), _options).toPromise().then((resp) => {
+      this.http.post('http://127.0.0.1:8050/login', JSON.stringify(body), _options).toPromise().then((resp) => {
         console.log('API Response : ', resp.text());
         this.setAuth(resp.json().token).then(dt => {
           resolve(resp);
@@ -94,7 +94,7 @@ export class ComunicacaoProvider {
         let _headers = new Headers({ 'Content-Type': 'application/json' });
         _headers.append('Authorization', "Bearer " + result);
         let _options = new RequestOptions({ headers: _headers });
-        this.http.get('/session', _options).toPromise().then((resp) => {
+        this.http.get('http://127.0.0.1:8050/session', _options).toPromise().then((resp) => {
           console.log('API Response : ', resp.text());
           resolve(resp);
         }).catch((error) => {

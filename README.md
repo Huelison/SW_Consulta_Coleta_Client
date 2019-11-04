@@ -1,5 +1,7 @@
-Cliente desenvolvido para testar a api de consulta de coletas
+Cliente desenvolvido em IONIC, e que utiliza o electron para que possar rodar como um programa desktop, utilizado para testar a api de consulta de coletas, desenvolvida em node.js
 
-Instalador do cliente est· dÌsponivel na pasta dist do projeto
+Instalador do cliente est√° d√≠sponivel na pasta dist do projeto
 
-È necess·rio ter a api rodando antes de iniciar a aplicaÁ„o
+√â necess√°rio ter a api rodando antes de iniciar a aplica√ß√£o. Link para a API: https://github.com/Huelison/SW_Consulta_Coleta_API
+
+
